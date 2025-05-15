@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.*;
 public class HelloWorldController {
 
     @GetMapping
-    public String greet(@RequestParam(name = "name", required = false, defaultValue = "") String name) {
+    public String greet(@RequestParam(name = "name", required = false, defaultValue = "UNKNOW") String name) {
         return "Hello, " + name + ". You are executing Maven project with method /HelloWorld2";
     }
 
     @GetMapping("/myname")
-    public String greet2(@RequestParam(name = "name", required = false, defaultValue = "") String name) {
+    public String greet2(@RequestParam(name = "name", required = false, defaultValue = "UNKNOW") String name) {
         return "Hello, " + name + ". You are executing Maven project with method /HelloWorld2/myname";
     }
 }
