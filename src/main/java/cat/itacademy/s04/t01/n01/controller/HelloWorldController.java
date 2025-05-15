@@ -8,7 +8,7 @@ public class HelloWorldController {
 
     @GetMapping
     public String greet(@RequestParam(name = "name", required = false, defaultValue = "") String name) {
-        return "Hello, \" + name + \". You are executing Maven project with method /HelloWorld2";
+        return "Hello, " + name + ". You are executing Maven project with method /HelloWorld2";
     }
 
     @GetMapping("/myname")
